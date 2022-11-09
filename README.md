@@ -2,4 +2,4 @@
 Installing:
 you can use setup.py or
 
-$ pip install tk
+pip install tk
