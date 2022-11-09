@@ -7,4 +7,5 @@ pip install tk
 
 Screenshots:
 
-![Screenshot at 2022-11-09 17-12-24](https://user-images.githubusercontent.com/62938195/200882979-0b0f25b5-b7ce-4569-9df9-350002819a55.png)
+
+![Untitled](https://user-images.githubusercontent.com/62938195/200884807-0b1b67a2-aa1f-4226-9eca-c16e4e4f9dfd.png)
