@@ -2,7 +2,7 @@ import tkinter
 from transformers import pipeline
 import time
 
-generator = pipeline('text-generation', model='EleutherAI/gpt-neo-125M')
+generator = pipeline('text-generation', model='EleutherAI/gpt-neo-1.3B')
 
 
   
@@ -17,7 +17,7 @@ master.geometry("1920x1080")
   
 def printInput():
     inp = inputtxt.get(1.0, "end-1c")
-    gen_text = generator(inp, do_sample=True, min_length=50, max_length=300, temperature=1.2)
+    gen_text = generator(inp, do_sample=True, min_length=10, max_length=100, temperature=1.2)
     inputtxt.delete("1.0",tkinter.END)
     inputtxt.insert('1.0', (gen_text[0]['generated_text']) )
     #lbl.config(text = "")

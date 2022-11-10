@@ -55,12 +55,12 @@ clearButton.place(x=700, y=940)
 copyButton = tkinter.Button(master,text = "Copy", height=2, width=15, command = save_text, bg='dimgray', activebackground="green")
 copyButton.place(x=1060, y=960)
 
-pasteButton = tkinter.Button(master,text = "Paste", height=1, width=15, command = open_text, bg='dimgray', activebackground="red")
+pasteButton = tkinter.Button(master,text = "Paste", height=2, width=15, command = open_text, bg='dimgray', activebackground="red")
 pasteButton.place(x=1060, y=940)
 
 
   
 # Label Creation
-lbl = tkinter.Label(master, text = "")
+lbl = tkinter.Label(master, text = "TEST")
 
 master.mainloop()
