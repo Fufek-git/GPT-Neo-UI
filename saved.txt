@@ -1,1 +1,4 @@
-Thi si scopuecd text
+Write me a list of names:
+- Igor
+- Arek
+- Boris

@@ -42,21 +42,24 @@ def save_text():
 
   
 # TextBox Creation
-inputtxt = tkinter.Text(master,height = 30, width = 150, font=('Fredoka One',17,''))
+inputtxt = tkinter.Text(master,
+                   height = 50,
+                   width = 150)
+  
 inputtxt.pack()
   
 # Button Creation
 printButton = tkinter.Button(master, text = "Generate", height=4, width=20, command = printInput, bg='orange', activebackground="green")
-printButton.place(x=860, y=940)
+printButton.place(x=860, y=855)
 
 clearButton = tkinter.Button(master,text = "Clear", height=4, width=15, command = clearInput, bg='dimgray', activebackground="red")
-clearButton.place(x=700, y=940)
+clearButton.place(x=700, y=855)
 
 copyButton = tkinter.Button(master,text = "Copy", height=2, width=15, command = save_text, bg='dimgray', activebackground="green")
-copyButton.place(x=1060, y=960)
+copyButton.place(x=1060, y=855)
 
-pasteButton = tkinter.Button(master,text = "Paste", height=1, width=15, command = open_text, bg='dimgray', activebackground="red")
-pasteButton.place(x=1060, y=940)
+pasteButton = tkinter.Button(master,text = "Paste", height=2, width=15, command = open_text, bg='dimgray', activebackground="red")
+pasteButton.place(x=1060, y=900)
 
 
   
