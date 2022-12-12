@@ -4,22 +4,33 @@ import time
 import linecache
 from ttkthemes import ThemedStyle
 
-generator = pipeline('text-generation', model='EleutherAI/gpt-neo-125M')
-
-  
-# Top level window
-
 master=tkinter.Tk()
 master.title("GPT-Neo Ui")
 master.geometry("1920x1080")
 style = ThemedStyle(master)
 master.tk.call("source", "forest-dark.tcl")
 style.theme_use("forest-dark")
+
+options_list = ['EleutherAI/gpt-neo-1.3B', 'EleutherAI/gpt-neo-125M']
+  
+# Variable to keep track of the option
+# selected in OptionMenu
+model = tkinter.StringVar(master)
+  
+# Set the default value of the variable
+model.set('EleutherAI/gpt-neo-125M')
+  
+# Create the optionmenu widget and passing 
+# the options_list and value_inside to it.
+question_menu = tkinter.OptionMenu(master, model, *options_list)
+question_menu.place(x=10, y=160)
   
 def printInput():
     inp = inputtxt.get(1.0, "end-1c")
     tempe = temperature.get(1.0, "end-1c")
-    gen_text = generator(inp, do_sample=True, min_length=50, max_length=300, temperature=float(tempe))
+    lenght = maxlenght.get(1.0, "end-1c")
+    generator = pipeline('text-generation', model=format(model.get()))
+    gen_text = generator(inp, do_sample=True, min_length=1, max_length=int(lenght), temperature=float(tempe))
     inputtxt.delete("1.0",tkinter.END)
     inputtxt.insert('1.0', (gen_text[0]['generated_text']) )
 
@@ -68,6 +79,13 @@ lbl.place(x=70, y=0)
 temperature = tkinter.Text(master,height = 1, width = 10, font=('Fredoka One',17,''))
 temperature.place(x=40, y=30)
 
+lbl = tkinter.Label(master, text = "Max lenght:")
+lbl.place(x=70, y=90)
+
+maxlenght = tkinter.Text(master,height = 1, width = 10, font=('Fredoka One',17,''))
+maxlenght.place(x=40, y=120)
+
 temperature.insert('1.0', ("1.2"))
+maxlenght.insert('1.0', ("150"))
 
 master.mainloop()
