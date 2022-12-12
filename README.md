@@ -25,4 +25,4 @@ For Fedora:
 ## Screenshots:
 
 
-![Untitled](https://user-images.githubusercontent.com/62938195/200884807-0b1b67a2-aa1f-4226-9eca-c16e4e4f9dfd.png)
+![Untitled](https://i.ibb.co/h7BngY9/Screenshot-from-2022-12-12-20-01-42.png)
