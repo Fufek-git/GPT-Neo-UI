@@ -11,7 +11,7 @@ style = ThemedStyle(master)
 master.tk.call("source", "forest-dark.tcl")
 style.theme_use("forest-dark")
 
-options_list = ['EleutherAI/gpt-neo-1.3B', 'EleutherAI/gpt-neo-125M']
+options_list = ['gpt2-large', 'EleutherAI/gpt-neo-125M']
   
 # Variable to keep track of the option
 # selected in OptionMenu
@@ -24,7 +24,7 @@ model.set('EleutherAI/gpt-neo-125M')
 # the options_list and value_inside to it.
 question_menu = tkinter.OptionMenu(master, model, *options_list)
 question_menu.place(x=10, y=160)
-  
+
 def printInput():
     inp = inputtxt.get(1.0, "end-1c")
     tempe = temperature.get(1.0, "end-1c")
