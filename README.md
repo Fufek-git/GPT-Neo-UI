@@ -1,7 +1,7 @@
 # GPT-UI-Fufka
 
 ## Info:
-this is a python tkinter ui with ability to use Gpt-Neo-125M and Gpt-2-Large.
+this is a python ui make with tkinter with ability to use Gpt-Neo-125M and Gpt-2-Large.
 
 ### Warnings:
 if you are using app for the first time you need to wait 10-30 minutes for model to download
