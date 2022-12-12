@@ -1,8 +1,9 @@
 import tkinter
 from transformers import pipeline
 import time
+from ttkthemes import ThemedStyle
 
-generator = pipeline('text-generation', model='EleutherAI/gpt-neo-1.3B')
+#generator = pipeline('text-generation', model='EleutherAI/gpt-neo-1.3B')
 
 
   
@@ -11,13 +12,22 @@ generator = pipeline('text-generation', model='EleutherAI/gpt-neo-1.3B')
 master=tkinter.Tk()
 master.title("GPT-Neo Ui")
 master.geometry("1920x1080")
-# Function for getting Input
-# from textbox and printing it 
-# at label widget
-  
+style = ThemedStyle(master)
+# Adding the package's directory to Tcl's auto_path
+# Create a style
+
+# Import the tcl file
+master.tk.call("source", "forest-dark.tcl")
+
+# Set the theme with the theme_use method
+style.theme_use("forest-dark")
+
+
+# Function for getting Input from textbox and printing it 
+
 def printInput():
     inp = inputtxt.get(1.0, "end-1c")
-    gen_text = generator(inp, do_sample=True, min_length=10, max_length=100, temperature=1.2)
+    #gen_text = generator(inp, do_sample=True, min_length=10, max_length=100, temperature=1.2)
     inputtxt.delete("1.0",tkinter.END)
     inputtxt.insert('1.0', (gen_text[0]['generated_text']) )
     #lbl.config(text = "")
