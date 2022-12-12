@@ -13,12 +13,16 @@ you can use setup.py or
 
 For Ubuntu or other distros with Apt:
 >sudo apt-get install python3-tk
+
 >pip install transformers
+
 >pip install ttkthemes
 
 For Fedora:
 >sudo dnf install python3-tkinter
+
 >pip install transformers
+
 >pip install ttkthemes
 
 
