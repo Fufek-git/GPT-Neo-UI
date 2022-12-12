@@ -1,4 +1,4 @@
-# GPT-Neo-UI
+# GPT-UI-Fufka
 ## Installing needed apps on linux:
 you can use setup.py or
 
