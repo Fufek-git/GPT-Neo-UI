@@ -1,10 +1,12 @@
 # GPT-Neo-UI
-## Installing needed apps:
+## Installing needed apps on linux:
 you can use setup.py or
 
->pip install tk
+For Ubuntu or other distros with Apt:
+>sudo apt-get install python3-tk
 
->pip install transformers
+For Fedora:
+>sudo dnf install python3-tkinter
 
 
 ## Screenshots:
